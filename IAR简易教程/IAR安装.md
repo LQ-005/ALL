@@ -9,7 +9,7 @@
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011161704403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70) 
 
 ### 1.3下载
->同学们除了可以下载最新版本尝鲜之外，还可以下载之前的版本。低版本IAR打开高版本IAR工程，工程配置会错乱，导致编译报错问题，所以一定要使用比推荐版本高的IAR
+>同学们除了可以下载最新版本尝鲜之外，还可以下载[之前的版本](https://pan.baidu.com/s/1HrbfJHOaO1BZLt7YeZ3WKg)。低版本IAR打开高版本IAR工程，工程配置会错乱，导致编译报错问题，所以一定要使用比推荐版本高的IAR
 
 单片机 | MK60 | MK66 | MKV58 | LPC54606 | LPC55S69 | IMXRT1052/IMXRT1064
 ----|-----|-----|-----|-----|----|----
