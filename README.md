@@ -2,19 +2,26 @@
 
 ## 开发板类
 
-### LPC54606（VD母板）资料  [https://github.com/LQ-005/LPC54606](https://github.com/LQ-005/LPC54606)
+### LPC54606（VD母板）资料  
+>>>>[https://github.com/LQ-005/LPC54606](https://github.com/LQ-005/LPC54606)
 
-### LPC55S69资料  [https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
+### LPC55S69资料  
+>>>>[https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
 
-### IMXRT1064（miniV3和V2）资料  [https://github.com/LQ-005/LPC54606](https://github.com/LQ-005/LPC54606)
+### IMXRT1064（miniV3和V2）资料  
+>>>>[https://github.com/LQ-005/LPC54606](https://github.com/LQ-005/LPC54606)
 
-### IMXRT1052（VK母板）资料  [https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
+### IMXRT1052（VK母板）资料  
+>>>>[https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
 
-### S32K14X资料  [https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
+### S32K14X资料  
+>>>>[https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
 
-### K60（VE2母板）资料  [https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
+### K60（VE2母板）资料  
+>>>>[https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
 
-### K66（VG母板）资料  [https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
+### K66（VG母板）资料  
+>>>>[https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
 ---
 ---
 ---
