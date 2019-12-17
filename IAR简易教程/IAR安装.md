@@ -49,12 +49,15 @@ IAR版本 | [IAR8.2](http://files.iar.com/ftp/pub/box/EWARM-CD-8221-15700.exe) |
 
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011173205442.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70)
+
 生成和谐过的激活文件
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011173439731.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011173741544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70)
 
 选择和谐过的文件
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011173826296.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011174027644.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70)
