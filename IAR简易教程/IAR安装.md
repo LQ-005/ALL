@@ -2,7 +2,7 @@
 
 ## 1.下载
 ### 1.1打开官网
-  ![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/1.png)
+  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011161534637.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70)
 
  ### 1.2找到要下载的版本
  ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011161618770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70)
@@ -34,15 +34,7 @@ IAR版本 | [IAR8.2](http://files.iar.com/ftp/pub/box/EWARM-CD-8221-15700.exe) |
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011165846960.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70)
 
-
-
-
-
-
-
-
 ## 3.和谐
-
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011172311512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191011172410677.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjM3ODMxOQ==,size_16,color_FFFFFF,t_70)
