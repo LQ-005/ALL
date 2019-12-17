@@ -2,9 +2,9 @@
 
 ## 开发板类
 
-### LPC54606资料
+### LPC54606资料  [https://github.com/LQ-005/LPC54606](https://github.com/LQ-005/LPC54606)
 
-### LPC55S69资料
+### LPC55S69资料  [https://github.com/LQ-005/LPC55S69](https://github.com/LQ-005/LPC55S69)
 ---
 ---
 ---
