@@ -34,7 +34,7 @@
 ## 新建工程  
 >打开IAR，这里使用IAR8.2版本
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151231174.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/2%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B.gif)
 
 ## 添加文件分组
 上面新建了一个空的工程，我们需要将使用的文件添加到工程里面（注意CMSIS的.h头文件这里没有添加，因为.h文件可以不添加进工程分组里面）。
@@ -50,24 +50,24 @@
 >├─Output                         IAR生成的.map文件，包涵许多重要信息  
 
 * 选中lpc54606工程 右键添加分组
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218150820543.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/3%E6%B7%BB%E5%8A%A0%E5%B7%A5%E7%A8%8B%E5%88%86%E7%BB%84.gif)
 
 * 选中lpc54606分组文件夹 右键添加文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151239194.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/4%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6.gif)
 
 * 将龙邱工程中example文件夹下的mian.c 和include.h复制并添加到新工程
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151248750.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/5%E6%B7%BB%E5%8A%A0main%E6%96%87%E4%BB%B6.gif)
 
 ## 设置工程配置
 * 选择芯片
 >选择芯片后，如果芯片有硬件浮点单元会默认开启（注意需要单片机有硬件浮点单元，MK60DN就没有）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151254726.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/6%E9%80%89%E6%8B%A9%E8%8A%AF%E7%89%87.gif)
 
 * printf 和 scanf 都选择支持全功能格式
 >（支持浮点数）
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151259560.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/7printf%E5%85%A8%E5%8A%9F%E8%83%BD%E6%94%AF%E6%8C%81.gif)
 
 * 添加头文件路径  
 >我们已经将文件添加到工程中了，但是编译的时候，报错找不到对应头文件。每个人的习惯不一样，头文件存放位置也不一样，因此需要将所有头文件位置告诉编译器，让编译器知道去那个文件夹找头文件（如果自己新写了头文件，记得将自己的头文件路径添加进来）。注意使用相对路径，如果使用绝对路径，当工程位置移动时，就会找不到头文件。   
@@ -82,7 +82,7 @@
 >>>$PROJ_DIR$\\..\\..\\..\Drivers  
 >>>$PROJ_DIR$\\..  
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151303886.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/8%E6%B7%BB%E5%8A%A0%E5%A4%B4%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84.gif)
 
 * 添加全局宏定义
 >将龙邱例程中的全局宏定义复制到新工程
@@ -95,37 +95,37 @@
 >>>PRINTF_ADVANCED_ENABLE=1  
 >>>SCANF_ADVANCED_ENABLE=1  
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151312876.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/10%E6%B7%BB%E5%8A%A0%E5%85%A8%E5%B1%80%E5%AE%8F%E5%AE%9A%E4%B9%89.gif)
 
 * 生成debug调试信息
 >仿真调试时需要使用
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151309100.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/9debug%E4%BF%A1%E6%81%AF.gif)
 
 * 优化等级
 >优化等级是一个比较重要的配置，优化等级越高，生成的bin文件就越小，一般情况下代码的运行速度也会提高，但是在Debug调试的时候，由于优化，代码可能不会顺序执行，局部变量也不可以在witch窗口观察。调试的时候可以将代码优化等级调到最低。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151316342.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/11%E4%BC%98%E5%8C%96%E7%AD%89%E7%BA%A7.gif)
 
 * 屏蔽警告
 >官方fsl库在编译时存在一些警告信息，因此我们参考官方SDK将对应的警告号屏蔽即可。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151429720.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/12%E5%B1%8F%E8%94%BD%E8%AD%A6%E5%91%8A.gif)
 
 * 分散加载文件
 >不同单片机RAM和FLASH起始地址和大小不尽相同，而且还可能外扩DRAM和FLASH，因此IAR中使用一个脚本.icf文件来确定工程的分散加载信息。IAR有自带的分散加载文件，但是这里我们使用自己修改过的分散加载文件。注意使用相对路径，如果使用绝对路径，当工程位置移动时，就会找不到分散加载文件。  
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151434438.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/13%E5%88%86%E6%95%A3%E5%8A%A0%E8%BD%BD%E6%96%87%E4%BB%B6.gif)
 
 * 电源管理lib库
 >NXP为了让用户更方便的使用电源低功耗，将相应的电源管理封装起来，做成lib库文件。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151447707.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/14%E6%B7%BB%E5%8A%A0%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86lib%E5%BA%93.gif)
 
 * debug下载器配置
 >IAR并不知道你使用什么下载器，因此需要你告诉IAR你使用的什么下载器。   
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151454532.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/15%E9%80%89%E6%8B%A9%E4%B8%8B%E8%BD%BD%E5%99%A8%E4%B8%8B%E8%BD%BD%E7%A8%8B%E5%BA%8F.gif)
 
 ## 添加工程分组
 >经过上面的配置后，程序以及可以通过jlink烧录进单片机，但是有时候我们的Debug时，使用最低的优化等级。Debug完成后使用较高的优化等级，每次都有修改配置。 可不可以生成两套配置？  
@@ -133,12 +133,12 @@
 * 删除一种配置分组
 >默认新建的工程都有两种配置 debug和release，上面我们配置了debug的配置，但是release还没有配置，将release删掉。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151457421.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/16%E5%88%A0%E9%99%A4%E9%85%8D%E7%BD%AE%E5%88%86%E7%BB%84.gif)
 
 * 添加一种配置分组
 >基于debug配置，生成新的release分组
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191218151507380.gif)
+![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/17%E6%B7%BB%E5%8A%A0relaese%E9%85%8D%E7%BD%AE%E5%88%86%E7%BB%84.gif)
 
 ## 总结
 
