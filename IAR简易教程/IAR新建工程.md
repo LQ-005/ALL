@@ -28,6 +28,7 @@
 
 * 将使用到的文件复制到对应文件夹  
 创建一个IAR_Project文件夹，将CMSIS和Drivers文件夹复制到IAR_Project文件夹中。
+
 ![图片](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/1%E6%96%87%E4%BB%B6%E5%A4%B9.gif)
 
 
@@ -50,12 +51,15 @@
 >├─Output                         IAR生成的.map文件，包涵许多重要信息  
 
 * 选中lpc54606工程 右键添加分组
+
 ![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/3%E6%B7%BB%E5%8A%A0%E5%B7%A5%E7%A8%8B%E5%88%86%E7%BB%84.gif)
 
 * 选中lpc54606分组文件夹 右键添加文件
+
 ![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/4%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6.gif)
 
 * 将龙邱工程中example文件夹下的mian.c 和include.h复制并添加到新工程
+
 ![在这里插入图片描述](https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/picture/new_project/5%E6%B7%BB%E5%8A%A0main%E6%96%87%E4%BB%B6.gif)
 
 ## 设置工程配置
