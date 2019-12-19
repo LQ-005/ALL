@@ -1,0 +1,93 @@
+#! armcc -E
+/*
+** ###################################################################
+**     Processors:          LPC54606J512BD100
+**                          LPC54606J512BD208
+**                          LPC54606J512ET100
+**
+**     Compiler:            Keil ARM C/C++ Compiler
+**     Reference manual:    LPC546xx User manual Rev.1.9  5 June 2017
+**     Version:             rev. 1.2, 2017-06-08
+**     Build:               b180801
+**
+**     Abstract:
+**         Linker file for the Keil ARM C/C++ Compiler
+**
+**     Copyright 2016 Freescale Semiconductor, Inc.
+**     Copyright 2016-2018 NXP
+**
+**     SPDX-License-Identifier: BSD-3-Clause
+**
+**     http:                 www.nxp.com
+**     mail:                 support@nxp.com
+**
+** ###################################################################
+*/
+
+#define m_interrupts_start             0x00000000
+#define m_interrupts_size              0x00000400
+
+#define m_text_start                   0x00000400
+#define m_text_size                    0x0007FC00
+
+#define m_data_start                   0x20000000
+#define m_data_size                    0x00028000
+
+/* LPC54606J512BD100 有200K的SRAM 其中有32K的I&D SRAM 160K的普通SRAM 和8K的USB专用SRAM */
+#define  m_data1_start                 0x04000000
+#define  m_data1_size                  0x00008000
+
+#define m_usb_sram_start               0x40100000
+#define m_usb_sram_size                0x00002000
+
+/* USB BDT size */
+#define usb_bdt_size                   0x0
+/* Sizes */
+#if (defined(__stack_size__))
+  #define Stack_Size                   __stack_size__
+#else
+  #define Stack_Size                   0x4000
+#endif
+
+#if (defined(__heap_size__))
+  #define Heap_Size                    __heap_size__
+#else
+  #define Heap_Size                    0x0400
+#endif
+
+LR_m_text m_interrupts_start m_text_start+m_text_size-m_interrupts_start { ; load region size_region
+  VECTOR_ROM m_interrupts_start m_interrupts_size { ; load address = execution address
+    * (RESET,+FIRST)
+  }
+  ER_m_text m_text_start FIXED m_text_size { ; load address = execution address
+    * (InRoot$$Sections)
+    .ANY (+RO)
+  }
+
+  /**MDK警告 L6329W 意思 RamFunction段没有使用（忽略即可） 可以将关键计算部分代码加载到RamFunction区域 加速运行 */
+  RW_m1_data m_data1_start m_data1_size-Stack_Size{ ; RW data
+    * (RamFunction)
+  }
+  
+  RW_m_data m_data_start m_data_size-Heap_Size { ; RW data
+    .ANY (+RW +ZI)
+  }
+  
+  ARM_LIB_HEAP +0 EMPTY Heap_Size {    ; Heap region growing up
+  }
+  ARM_LIB_STACK m_data1_start+m_data1_size EMPTY -Stack_Size { ; Stack region growing down
+  }
+}
+
+;LR_m_usb_bdt m_usb_sram_start usb_bdt_size {
+;  ER_m_usb_bdt m_usb_sram_start UNINIT usb_bdt_size {
+;    * (m_usb_bdt)
+;  }
+;}
+
+;LR_m_usb_ram (m_usb_sram_start + usb_bdt_size) (m_usb_sram_size - usb_bdt_size) {
+;  ER_m_usb_ram (m_usb_sram_start + usb_bdt_size) UNINIT (m_usb_sram_size - usb_bdt_size) {
+;    * (m_usb_global)
+;  }
+;}
+
