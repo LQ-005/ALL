@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>readme.md</title>
+<title>IAR下载和调试.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
@@ -421,67 +421,227 @@ void 0!==arguments[0]&&(br.sequenceConfig=arguments[0]),e=arguments[1]):e=argume
           : 'default'
     });
   </script>
-<p><a href="http://shop36265907.taobao.com">北京龙邱智能科技</a>
-<img src="https://note.youdao.com/yws/api/personal/file/WEB8a51a3385904ba8d4505271e9e9be364?method=download&amp;shareKey=c0de97cb64246fe4120904147dbaf057" alt="北京龙邱智能科技" title="北京龙邱智能科技"></p>
-<h1 id="iar%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B">IAR简易教程</h1>
-<h2 id="%E7%AE%80%E6%98%8E">简明</h2>
+<p><a href="http://shop36265907.taobao.com">北京龙邱智能科技</a></p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB8a51a3385904ba8d4505271e9e9be364?method=download&amp;shareKey=c0de97cb64246fe4120904147dbaf057" alt="北京龙邱智能科技" title="北京龙邱智能科技"></p>
+<h1 id="iar%E4%B8%8B%E8%BD%BD">IAR下载</h1>
 <blockquote>
-<p>本教程适用于初次接触IAR的同学，简单介绍IAR的安装与使用。</p>
+<p>下载器与单片机之间的接线有两种JTAG和SWD，SWD只需要四根线（GND、TCK、TMS、RST（可选）），一般使用SWD接线即可。</p>
 </blockquote>
-<h2 id="iar%E5%AE%89%E8%A3%85">IAR安装</h2>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p><a href="https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/IAR%E5%AE%89%E8%A3%85.md">IAR安装</a></p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="iar%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B">IAR新建工程</h2>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p><a href="https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/IAR%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B.md">IAR新建工程</a></p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="iar%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B">IAR常用功能简介</h2>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p><a href="https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/IAR%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B.md">IAR常用功能简介</a></p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="iar%E4%B8%8B%E8%BD%BD%E5%92%8C%E8%B0%83%E8%AF%95">IAR下载和调试</h2>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p><a href="https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/IAR%E4%B8%8B%E8%BD%BD%E5%92%8C%E8%B0%83%E8%AF%95.md">IAR下载和调试</a></p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="iar%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">IAR常见问题及解决办法</h2>
+<ol>
+<li>硬件连接</li>
+</ol>
+<ul>
+<li>使用龙邱下载器的</li>
+</ul>
+<hr>
+<p>龙邱核心板的下载接口丝印层都有一个白色凸口，对应龙邱下载器排线的凸口。</p>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB2b1ad5fb5efe4af5ec4b0d666a7c1566?method=download&shareKey=c7f2595bf7d66d96ad2df038ef03b427">
+</div>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBc513f27a220d0099e4b95ea7d5a01bb9?method=download&shareKey=1d363eaa1f59e35f7596a40a7e6a7d40">
+</div>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB78620a778f1182a0cadc69cf0e173650?method=download&shareKey=8f1665f86b89bae264a2af24780063d4">
+</div>
+<ul>
+<li>使用其他下载器的</li>
+</ul>
+<hr>
+<p>如果没有使用龙邱下载器，打开核心板原理图，找到下载口部分，接线对应即可：</p>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB3973a1d686a9e82352040f43c45382d8?method=download&shareKey=7fb27a8050e12645709af14d8737545c">
+</div>
+<pre><code>  单片机SWDIO(TMS)  -----  下载器SWDIO(TMS)
+  单片机SWDIO(TMS)  -----  下载器SWCLK(TCK)
+  单片机RST         -----  下载器RST
+</code></pre>
+<p>下载器哪个管脚是SWDIO、哪个是SWCLK，打开盒子看丝印或者问卖家。一般常用的20Pin接口图</p>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBf3b52488139b137e932620ed3668b10f?method=download&shareKey=5446b3f3a325007974ee1e9f4ec52c0b">
+</div>
+<hr>
+<hr>
+<hr>
+<ol start="2">
+<li>软件配置</li>
+</ol>
 <blockquote>
 <blockquote>
+<p>IAR并不知道你使用什么下载器，因此需要你告诉IAR你使用的什么下载器。</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>使用JLink-V9下载</li>
+</ul>
+<hr>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBcb332b1cca0ba3655aa8331e6bbc4931?method=download&shareKey=438ffe63d8e040f9d50e63f353e25cc1">
+</div>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB567bb84238321e8ff417f75fb2f3ddfb?method=download&shareKey=88f34ac8ce4fc33499145d533b6a9b0c">
+</div>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB3da1bb9ab9a3b23cd08cb1c402a2cb7d?method=download&shareKey=9c0bf7c3b3c0ad7b30c11f86b54dfb1d">
+</div>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB194171059b8edc1e5d4ff52e1efba7fc?method=download&shareKey=947fdccc16c388f3d925f1334b1f9eae">
+</div>
+<ul>
+<li>使用DAPLink下载</li>
+</ul>
+<hr>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBcb332b1cca0ba3655aa8331e6bbc4931?method=download&shareKey=438ffe63d8e040f9d50e63f353e25cc1">
+</div>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB9f3ee75785d0fa5202d0fe451587fa72?method=download&shareKey=f94c4f27f763387eaef0721161d62462">
+</div>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB3da1bb9ab9a3b23cd08cb1c402a2cb7d?method=download&shareKey=9c0bf7c3b3c0ad7b30c11f86b54dfb1d">
+</div>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB5952f32a4fc9cf94f835a1f49ee7329c?method=download&shareKey=d4974fb31f97fa8e7d62cc5461fbe8ef">
+</div>
+<hr>
+<hr>
+<hr>
+<h1 id="iar%E8%B0%83%E8%AF%95">IAR调试</h1>
+<blockquote>
+<p>下载器和核心板接好线并且在IAR中选择好下载器，就可以下载调试了，调试时最好把优化等级调低（参考IAR常用功能简介）。</p>
+</blockquote>
+<h2 id="%E8%B0%83%E8%AF%95%E5%B8%B8%E7%94%A8%E6%8C%89%E9%94%AE%E8%AF%B4%E6%98%8E">调试常用按键说明</h2>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBe46879c73e6019d93583fc2a06c359b2?method=download&shareKey=cc4b17c487230595bd4ce9ae3d530a7d">
+</div>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB08f0da20f9b7c387b7c02b7f17d68c36?method=download&shareKey=9fb0665df9a4392fc4f49628c04f10f9">
+</div>
+<ul>
+<li>
+<p>第 1 个图标是重新编译例程并进入调试状态。</p>
+</li>
+<li>
+<p>第 2 个图标是重新进入调试状态。</p>
+</li>
+<li>
+<p>第 3 个图标是退出调试。</p>
+</li>
+<li>
+<p>第 4 个图标是每次点击以函数为单位运行，不会进入函数内部。</p>
+</li>
+<li>
+<p>第 5 个图标是单步调试，每次点击运行一行代码，所以只要有子函数就会进入。</p>
+</li>
+<li>
+<p>第 6 个图标是退出当前执行函数，点击后退出当前运行的函数，执行下一个函数。</p>
+</li>
+<li>
+<p>第 7 个图标是进入下一个状态，跟第 4 个图标
+功能差不多。</p>
+</li>
+<li>
+<p>第 8 个图标是直接运行到光标处，用户用鼠标左键点击一下，可以看到前面有光标即可。</p>
+</li>
+<li>
+<p>第 9 个图标是全速运行（经常和断点配合使用）。</p>
+</li>
+<li>
+<p>第 10 个图标是用于暂停全速运行。</p>
+</li>
+<li>
+<p>第 11 个图标是复位调试，重新回到 main 函数开始执行。</p>
+</li>
+</ul>
+<h2 id="%E6%96%AD%E7%82%B9">断点</h2>
 <blockquote>
 <blockquote>
-<p><a href="https://github.com/LQ-005/ALL/blob/master/IAR%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/IAR%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.md">IAR常见问题及解决办法</a></p>
+<p>在Debug过程中，通常只需要重点关注某一部分代码，让程序运行到指定位置后，再单步调试，进行分析。</p>
 </blockquote>
 </blockquote>
-</blockquote>
-</blockquote>
-<h2 id="github%E5%9B%BE%E7%89%87%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98">Github图片不显示问题</h2>
+<p>经过上面debug按键介绍，可以使用第8个图标让程序运行到指定位置，当然也可以使用断点+全速运行的方法让程序运行到指定位置。</p>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBae2cab0d8627b93c5309aaf87530aacb?method=download&shareKey=15f09ee0d6816e6592e4954441a17f67">
+</div>
+<h2 id="%E5%AF%84%E5%AD%98%E5%99%A8%E6%9F%A5%E7%9C%8B%E8%AF%B4%E6%98%8E">寄存器查看说明</h2>
 <blockquote>
-<p>由于网络问题，Github上的图片图片可能不显示，可以下载对应的.html文件，拖到浏览器查看。</p>
+<blockquote>
+<p>进行底层开发时，需要查看寄存器的值</p>
 </blockquote>
+</blockquote>
+<p>打开寄存器窗口</p>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBc8f5cd676bf52565ae2187a5760a7e94?method=download&shareKey=afe18653eafa4dcf4c07df8353a3bd65">
+</div>
+<p>右键选择对应寄存器窗口</p>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB45f4fec1f472eadc13248984bfe432a9?method=download&shareKey=e0c994c42231c54c990347609fa5b4dc">
+</div>
+<h2 id="%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E6%9F%A5%E7%9C%8B">全局变量查看</h2>
+<blockquote>
+<blockquote>
+<p>全局变量占用的内存空间是固定的，程序访问该全局变量时直接访问该地址空间即可，因此全局变量可以在live watch中实时显示。但是局部变量是存储在栈空间中的，当退出局部变量作用域时，该局部变量占用的内存空间就会被系统回收，相当于这个变量就没了，因此watch窗口中查看局部变量时，确保程序在局部变量的作用域内，否则会显示ERROR。</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>watch窗口</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>watch窗口可以查看全局变量和局部变量（查看局部变量时，确保程序在局部变量的作用域内，否则会显示ERROR）。不过watch窗口在全速运行时，里面的变量不能刷新。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBc70b1be6ed3e3dc680cfc748e9f4922e?method=download&shareKey=f5501a399bfed948fae7810237a50aa6">
+</div>
+<ul>
+<li>live watch窗口</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>live watch窗口可以查看全局变量。不过live watch窗口不可以查看局部变量，在全速运行时，live watch里面的变量会实时刷新。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB0cd99a59928a901dcbde7a4d73e41e0b?method=download&shareKey=91b79e9861f836620a175ab279b21580">
+</div>
+<ul>
+<li>局部变量窗口</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>可以显示当前栈空间下的局部变量</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB69f5cd027713a0de2ab99eb767cc7d2b?method=download&shareKey=f1f58028a3e34ace5f983a6754fbecb5">
+</div>
+<h2 id="%E5%85%B6%E4%BB%96%E7%AA%97%E5%8F%A3">其他窗口</h2>
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB38773294883796ac12175194f8745d70?method=download&shareKey=eb8b81a53da2b1215be5ff4a230823e5">
+</div>
+<h2 id="%E8%B0%83%E8%AF%95%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3">调试基本思想</h2>
+<blockquote>
+<blockquote>
+<p>好多同学拿到调试器后，就只是当作下载器用。不知道怎么去仿真，遇到问题之后，就直接跑过来，啥情况啊？咋回事啊？我......</p>
+</blockquote>
+</blockquote>
+<p>遇到问题后，首先分析问题，举个例子：</p>
+<p>我的程序里设置是小车在拐弯时减速，但是实际发现并没有减速？</p>
+<p>思考为啥没有减少？</p>
+<p>可能没检测到拐弯！</p>
+<p>进行Debug，设置一个入弯标志位，拐弯时检查入弯标志位，看是否检测到入弯。</p>
+<p>这里假设检测到了入弯，那么再次思考，为啥没有减速？速度是哪里来的？</p>
+<p>这里假设速度和PWM控制信号占空比正相关，没有减速，那就是证明，PWM信号占空比没有降低。思考为啥PWM信号占空比没有降低？ PWM信号哪里来的？</p>
+<p>这里假设PWM占空比是由PID控制的，进行Debug，查看PID控制器的输入信号和各个分量的输出。</p>
+<p>......</p>
+<p>总结：整个Debug的思路就是找到异常，分析异常，追踪异常，找到异常根源，解决问题。</p>
 
 </body>
 </html>

@@ -1,178 +1,217 @@
-# IAR下载和调试
+[北京龙邱智能科技](http://shop36265907.taobao.com)
 
->[北京龙邱智能科技](http://shop36265907.taobao.com)
+![北京龙邱智能科技](https://note.youdao.com/yws/api/personal/file/WEB8a51a3385904ba8d4505271e9e9be364?method=download&shareKey=c0de97cb64246fe4120904147dbaf057 "北京龙邱智能科技")
 
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB8a51a3385904ba8d4505271e9e9be364?method=download&shareKey=c0de97cb64246fe4120904147dbaf057">
-</div>
+# IAR下载
 
->本教程适用于初次接触IAR的同学，简单介绍IAR的下载和调试。
+>下载器与单片机之间的接线有两种JTAG和SWD，SWD只需要四根线（GND、TCK、TMS、RST（可选）），一般使用SWD接线即可。
 
-## IAR常用功能简介
+1) 硬件连接
 
-* IAR配置选择
 
->>IAR可以一套代码使用多种配置，龙邱的MK60FX和MK60DN就是通过不同配置公用一套代码。  
+* 使用龙邱下载器的  
+---
 
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB93413cef29f550a69ccabf9657c02d4b?method=download&shareKey=d3e50563a9630bd656b82bc432226a99">
-</div>
-
-* 代码颜色设置
+龙邱核心板的下载接口丝印层都有一个白色凸口，对应龙邱下载器排线的凸口。  
 
 <div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB8e6e1c0227130d52e3acb4519e471482?method=download&shareKey=a82ebb6d0fbea666d4363056c6a82491">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB2b1ad5fb5efe4af5ec4b0d666a7c1566?method=download&shareKey=c7f2595bf7d66d96ad2df038ef03b427">
 </div>
 
 <div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBdab96da12618a923e4fd5e075c2f965a?method=download&shareKey=cf9b270962652ee8b7518b9a465be15d">
-</div>
-
-* 用户关键字
-
->>上面颜色设置中有一项是设置用户关键字颜色的，IAR支持用户自定义关键字。如果你想要一些变量或者什么比较醒目，可以使用用户关键字功能。  
-
-首先新建一个UserKeyWord.txt文档，在文档中加入自己的关键字，比如PRINTF和Test_LED我想用蓝色显示。
-
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBff67592a58718ade9f6c62a2f0d08aef?method=download&shareKey=da468ddaab5b54a6a7e68f98986bd00d">
-</div>
-
-在UserKeyWord.txt添加PRINTF 和 Test_LED。
-
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBb94b16d50389046988d3dbb761960f00?method=download&shareKey=46b5685cd6520e8a67750548e9be569e">
-</div>
-
-将UserKeyWord.txt添加到工程中.
-
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBa7bb09b2a7cb7a38d4756531796c3961?method=download&shareKey=174d635908b1e1bd3477be6bc9eb5ea6">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBc513f27a220d0099e4b95ea7d5a01bb9?method=download&shareKey=1d363eaa1f59e35f7596a40a7e6a7d40">
 </div>
 
 <div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB476dd9e9b6276e3826066190b48657f4?method=download&shareKey=37e9166d7827fbae2f62f4742500f997">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB78620a778f1182a0cadc69cf0e173650?method=download&shareKey=8f1665f86b89bae264a2af24780063d4">
+</div>
+
+* 使用其他下载器的  
+---
+
+如果没有使用龙邱下载器，打开核心板原理图，找到下载口部分，接线对应即可：
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB3973a1d686a9e82352040f43c45382d8?method=download&shareKey=7fb27a8050e12645709af14d8737545c">
+</div>
+
+      单片机SWDIO(TMS)  -----  下载器SWDIO(TMS)
+      单片机SWDIO(TMS)  -----  下载器SWCLK(TCK)
+      单片机RST         -----  下载器RST
+
+下载器哪个管脚是SWDIO、哪个是SWCLK，打开盒子看丝印或者问卖家。一般常用的20Pin接口图
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBf3b52488139b137e932620ed3668b10f?method=download&shareKey=5446b3f3a325007974ee1e9f4ec52c0b">
+</div>
+
+---
+---
+---
+
+2) 软件配置  
+
+>>IAR并不知道你使用什么下载器，因此需要你告诉IAR你使用的什么下载器。
+
+* 使用JLink-V9下载
+---
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBcb332b1cca0ba3655aa8331e6bbc4931?method=download&shareKey=438ffe63d8e040f9d50e63f353e25cc1">
 </div>
 
 <div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBf60db75b58282d2b3372987c7a1121bb?method=download&shareKey=85ddac2ee73d564191892e8d03700691">
-</div>
-
-* 自动整理代码
-
->>有些代码写的十分散乱，不方便阅读，可以选中杂乱代码，通过快捷键进行自动整理.
- 
-配置代码格式
-
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB5db5f63ac492a686299a14a7ea403ef7?method=download&shareKey=31f819dce9008515cb203b5a317efbd0">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB567bb84238321e8ff417f75fb2f3ddfb?method=download&shareKey=88f34ac8ce4fc33499145d533b6a9b0c">
 </div>
 
 <div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB2f661ee6e73a82c5aebf7e8044ab84d9?method=download&shareKey=56b391bcc0d560b8f6d10027a6f2a9ef">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB3da1bb9ab9a3b23cd08cb1c402a2cb7d?method=download&shareKey=9c0bf7c3b3c0ad7b30c11f86b54dfb1d">
 </div>
 
 <div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB02a3e6d8aa2b8d9019c7c6228e52c498?method=download&shareKey=ade83e22f20439bdccb2dbb60df6bc31">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB194171059b8edc1e5d4ff52e1efba7fc?method=download&shareKey=947fdccc16c388f3d925f1334b1f9eae">
 </div>
 
-查看自动整理代码的快捷键
+* 使用DAPLink下载
+---
 
 <div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBb235f0fcf493021a0fc80ea1cc4c1f9a?method=download&shareKey=698c8976f5d7040f2bcc028b344711b8">
-</div>
-
-选择需要整理的代码
-
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB53a79705f64c01dbd2da4bb1470d8a3b?method=download&shareKey=e006e06cc68b9717cedccc1ee0c48036">
-</div>
-
-按下Ctrl + T进行自动整理(自己的快捷键)
-
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBb950292de9465b4ab200536283a73256?method=download&shareKey=bd730800aa8519b4797ab5d8a3f5377f">
-</div>
-
-* 多行注释
-
->>调试的时候，可能需要频繁的注释一些代码，可以使用多行注释快捷键实现。  
-
-查看多行注释快捷键，可以自行修改，使用对应的快捷键即可。选中需要注释的代码，按下相应快捷键即可进行注释或者取消注释。
-
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB96c2d328fdc2e013d19f9cecaa584614?method=download&shareKey=4ba94a8b582bb8d2ca1b1cbd084a0e94">
-</div>
-
-* 多核编译设置
-
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBa187c5c829854983c21a4cebba57476f?method=download&shareKey=48e23f320a11c1269010e92b5924848d">
-</div>
-
-* live watch窗口刷新时间设置
-
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB252671d80e4ea1289ae0df2766d28453?method=download&shareKey=30c24a018f3a665b71f13fd4d9be639d">
-</div>
-
-* 模板设置
-
->>诸如switch()语句或者函数注释可能经常用的，我们可以把它放在模板里面，用到的时候，直接调用模板即可快速使用。  
-
-查看对应快捷键（可以自行修改）
-
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEB7ca256e54657f8022e50f2f4f47800ca?method=download&shareKey=49f3c60aceb9b8f3d2c8f644352e5a3b">
-</div>
-
-按下快捷键打开模板并添加switch和函数注释模板  
-
-    #TEMPLATE &Statement>&switch
-    switch(%c)
-    {
-        case 0:
-        
-            break;
-            
-        case 1:
-        
-            break;
-            
-        case 2:
-        
-            break;
-            
-        case 3:
-        
-            break;
-            
-        default:
-            break;
-    }
-
-    #TEMPLATE &Corporate>&comment,"description &DESCRIPTION","param &PARAME","return &RETURN","note &NOTE","example &EXAMPLE",&Created="$DATE$"
-    /*！
-    * @brief    %1
-    *
-    * @param    %2
-    *
-    * @return   %3
-    *
-    * @note     %4
-    *
-    * @see      %5
-    *
-    * @date     %6
-    */
-
-保存模板后，使用快捷键调用模板
-<div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBcd3b43d2a73755f2b694411702e9cb08?method=download&shareKey=74f10bf39dfb5ed77e0de39a6490351a">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBcb332b1cca0ba3655aa8331e6bbc4931?method=download&shareKey=438ffe63d8e040f9d50e63f353e25cc1">
 </div>
 
 <div align="center">
-<img src="https://note.youdao.com/yws/api/personal/file/WEBdbd4be14fefa8ad4a0234e446ec857fe?method=download&shareKey=4ba2f0c3985ba318dc564e21e24bff43">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB9f3ee75785d0fa5202d0fe451587fa72?method=download&shareKey=f94c4f27f763387eaef0721161d62462">
 </div>
 
-## IAR仿真调试
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB3da1bb9ab9a3b23cd08cb1c402a2cb7d?method=download&shareKey=9c0bf7c3b3c0ad7b30c11f86b54dfb1d">
+</div>
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB5952f32a4fc9cf94f835a1f49ee7329c?method=download&shareKey=d4974fb31f97fa8e7d62cc5461fbe8ef">
+</div>
+
+---
+---
+---
+
+# IAR调试
+
+>下载器和核心板接好线并且在IAR中选择好下载器，就可以下载调试了，调试时最好把优化等级调低（参考IAR常用功能简介）。  
+
+## 调试常用按键说明
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBe46879c73e6019d93583fc2a06c359b2?method=download&shareKey=cc4b17c487230595bd4ce9ae3d530a7d">
+</div>
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB08f0da20f9b7c387b7c02b7f17d68c36?method=download&shareKey=9fb0665df9a4392fc4f49628c04f10f9">
+</div>
+
+* 第 1 个图标是重新编译例程并进入调试状态。
+
+* 第 2 个图标是重新进入调试状态。
+
+* 第 3 个图标是退出调试。
+
+* 第 4 个图标是每次点击以函数为单位运行，不会进入函数内部。
+
+* 第 5 个图标是单步调试，每次点击运行一行代码，所以只要有子函数就会进入。
+
+* 第 6 个图标是退出当前执行函数，点击后退出当前运行的函数，执行下一个函数。
+
+* 第 7 个图标是进入下一个状态，跟第 4 个图标
+功能差不多。
+
+* 第 8 个图标是直接运行到光标处，用户用鼠标左键点击一下，可以看到前面有光标即可。
+
+* 第 9 个图标是全速运行（经常和断点配合使用）。
+
+* 第 10 个图标是用于暂停全速运行。
+
+* 第 11 个图标是复位调试，重新回到 main 函数开始执行。
+
+## 断点
+
+>>在Debug过程中，通常只需要重点关注某一部分代码，让程序运行到指定位置后，再单步调试，进行分析。  
+
+经过上面debug按键介绍，可以使用第8个图标让程序运行到指定位置，当然也可以使用断点+全速运行的方法让程序运行到指定位置。
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBae2cab0d8627b93c5309aaf87530aacb?method=download&shareKey=15f09ee0d6816e6592e4954441a17f67">
+</div>
+
+## 寄存器查看说明
+
+>>进行底层开发时，需要查看寄存器的值
+
+打开寄存器窗口
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBc8f5cd676bf52565ae2187a5760a7e94?method=download&shareKey=afe18653eafa4dcf4c07df8353a3bd65">
+</div>
+
+右键选择对应寄存器窗口
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB45f4fec1f472eadc13248984bfe432a9?method=download&shareKey=e0c994c42231c54c990347609fa5b4dc">
+</div>
+
+## 全局变量查看
+
+>>全局变量占用的内存空间是固定的，程序访问该全局变量时直接访问该地址空间即可，因此全局变量可以在live watch中实时显示。但是局部变量是存储在栈空间中的，当退出局部变量作用域时，该局部变量占用的内存空间就会被系统回收，相当于这个变量就没了，因此watch窗口中查看局部变量时，确保程序在局部变量的作用域内，否则会显示ERROR。
+
+* watch窗口
+
+>>>watch窗口可以查看全局变量和局部变量（查看局部变量时，确保程序在局部变量的作用域内，否则会显示ERROR）。不过watch窗口在全速运行时，里面的变量不能刷新。
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEBc70b1be6ed3e3dc680cfc748e9f4922e?method=download&shareKey=f5501a399bfed948fae7810237a50aa6">
+</div>
+
+* live watch窗口
+
+>>>live watch窗口可以查看全局变量。不过live watch窗口不可以查看局部变量，在全速运行时，live watch里面的变量会实时刷新。
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB0cd99a59928a901dcbde7a4d73e41e0b?method=download&shareKey=91b79e9861f836620a175ab279b21580">
+</div>
+
+* 局部变量窗口
+
+>>>可以显示当前栈空间下的局部变量
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB69f5cd027713a0de2ab99eb767cc7d2b?method=download&shareKey=f1f58028a3e34ace5f983a6754fbecb5">
+</div>
+
+## 其他窗口
+
+<div align="center">
+<img src="https://note.youdao.com/yws/api/personal/file/WEB38773294883796ac12175194f8745d70?method=download&shareKey=eb8b81a53da2b1215be5ff4a230823e5">
+</div>
+
+
+
+## 调试基本思想
+
+>>好多同学拿到调试器后，就只是当作下载器用。不知道怎么去仿真，遇到问题之后，就直接跑过来，啥情况啊？咋回事啊？我......
+
+ 遇到问题后，首先分析问题，举个例子：
+
+ 我的程序里设置是小车在拐弯时减速，但是实际发现并没有减速？
+
+ 思考为啥没有减少？  
+
+ 可能没检测到拐弯！  
+
+ 进行Debug，设置一个入弯标志位，拐弯时检查入弯标志位，看是否检测到入弯。  
+
+ 这里假设检测到了入弯，那么再次思考，为啥没有减速？速度是哪里来的？  
+
+ 这里假设速度和PWM控制信号占空比正相关，没有减速，那就是证明，PWM信号占空比没有降低。思考为啥PWM信号占空比没有降低？ PWM信号哪里来的？  
+
+这里假设PWM占空比是由PID控制的，进行Debug，查看PID控制器的输入信号和各个分量的输出。  
+
+......
+
+总结：整个Debug的思路就是找到异常，分析异常，追踪异常，找到异常根源，解决问题。

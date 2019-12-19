@@ -1,3 +1,7 @@
+[北京龙邱智能科技](http://shop36265907.taobao.com)
+
+![北京龙邱智能科技](https://note.youdao.com/yws/api/personal/file/WEB8a51a3385904ba8d4505271e9e9be364?method=download&shareKey=c0de97cb64246fe4120904147dbaf057 "北京龙邱智能科技")
+
 # IAR新建工程
 
 >本教程适用于初次接触IAR的同学，通过介绍IAR如何新建工程，了解一些常用工程选项的作用。
@@ -116,7 +120,7 @@
 
 * 优化等级
 
->优化等级是一个比较重要的配置，优化等级越高，生成的bin文件就越小，一般情况下代码的运行速度也会提高，但是在Debug调试的时候，由于优化，代码可能不会顺序执行，局部变量也不可以在witch窗口观察。调试的时候可以将代码优化等级调到最低。
+>优化等级是一个比较重要的配置，优化等级越高，生成的bin文件就越小，一般情况下代码的运行速度也会提高，但是在Debug调试的时候，由于优化，代码可能不会顺序执行，调试的时候可以将代码优化等级调到最低。
 
 ![在这里插入图片描述](https://note.youdao.com/yws/api/personal/file/WEBfc6a50ad032917bcf6219980135d7235?method=download&shareKey=ca849b1dddeb18a942be5a2f28f1c839)
 
